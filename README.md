@@ -1,23 +1,29 @@
-<<<<<<< HEAD
+
 # Event_Management
 =======
 Event Management Application
 A web-based Event Management system designed to help users create and manage events, book tickets, and make payments seamlessly. This application includes a Stripe payment gateway integration for secure online transactions.
 
 Features
-User Authentication: Users can register and log in to manage events and bookings.
-Event Creation: Admins can create and manage events with details such as date, time, location, and ticket price.
-Event Booking: Users can browse events and book tickets.
-Stripe Payment Integration: Users can securely make payments for event bookings via Stripe.
-Admin Dashboard: Admins can view and manage events and bookings.
+---------
+-User Authentication: Users can register and log in to manage events and bookings.
+-Event Creation: Admins can create and manage events with details such as date, time, location, and ticket price.
+-Event Booking: Users can browse events and book tickets.
+-Stripe Payment Integration: Users can securely make payments for event bookings via Stripe.
+-Admin Dashboard: Admins can view and manage events and bookings.
+
 Technologies Used
-Backend: Django (Python)
-Frontend: HTML, CSS, JavaScript
-Database: SQLite (can be replaced with any other DB like PostgreSQL)
-Payment Gateway: Stripe API (for secure payments)
-Authentication: Django's built-in authentication system
-Version Control: Git, GitHub
+------------------
+
+-Backend: Django (Python)
+-Frontend: HTML, CSS, JavaScript
+-Database: SQLite (can be replaced with any other DB like PostgreSQL)
+-Payment Gateway: Stripe API (for secure payments)
+-Authentication: Django's built-in authentication system
+-Version Control: Git, GitHub
+
 Installation
+------------
 To set up the project locally, follow the steps below:
 
 1. Clone the Repository
@@ -79,18 +85,22 @@ python manage.py runserver
 Visit http://127.0.0.1:8000 in your browser to access the application.
 
 Usage
-Admin Login: Visit /admin and log in using the superuser credentials you created.
-User Login/Registration: Users can register and log in to view and book events.
-Booking: After logging in, users can browse available events and make bookings. Payments will be processed via Stripe.
+------
+-Admin Login: Visit /admin and log in using the superuser credentials you created.
+-User Login/Registration: Users can register and log in to view and book events.
+-Booking: After logging in, users can browse available events and make bookings. Payments will be processed via Stripe.
 Contributing
-If you'd like to contribute to this project, feel free to fork the repository, create a branch, and submit a pull request with your changes.
+-If you'd like to contribute to this project, feel free to fork the repository, create a branch, and submit a pull request with your changes.
 
 Steps for contributing:
+-------------------------
 Fork the repository.
 Create a new branch (git checkout -b feature/your-feature-name).
 Make your changes and commit them (git commit -am 'Add your feature').
 Push your branch (git push origin feature/your-feature-name).
 Open a pull request on GitHub.
+
 License
+--------
 This project is licensed under the MIT License - see the LICENSE file for details.
 >>>>>>> 846c091 (Create README.md)
