@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet"><!-- Include Google Font -->
+    <title>Milina Events</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/feather-icons">
+
+</head>
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Milina Events</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <a class="dropdown-item" href="{% url 'Gallery' %}">Photo Gallery</a>
+                        <a class="dropdown-item" href="{% url 'Testimonials' %}">Testimonials</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="{% url 'Cooperative_Event' %}">Cooperative Event</a>
+                        <a class="dropdown-item" href="">Wedding Planner</a>
+                        <a class="dropdown-item" href="#">Beach Wedding</a>
+                        <a class="dropdown-item" href="#">Music and Entertainment</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Wedding_Venue' %}">Wedding Venues in Kerala</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Let’s Talk</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="user"></i> <!-- Feather icon for user -->
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="{% url 'Login' %}">Login</a>
+                        <a class="dropdown-item" href="{% url 'Customer_Registration' %}">Register</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block content %}
+
+
+
+{% endblock %}
+<footer class="footer">
+
+    <!-- Company Information -->
+    <div class="footer-info">
+        <h2>Milina Events</h2>
+        <p>
+            Planning a full event has never been easier! Melodia® Events is an ISO 9001:2015 Certified Event Management Company based in Kerala, India, offering various services to make your events stress-free and memorable.
+            With offices in Kochi, Thrissur, Calicut, and Trivandrum, we specialize in weddings, corporate events, private parties, and occasions specifically for Keralites and Malayalees.
+        </p>
+    </div>
+    <div class="footer-row">
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Venues</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Corporate Events</a></li>
+                <li><a href="#">Wedding Planner</a></li>
+                <li><a href="#">Music & Entertainment</a></li>
+                <li><a href="#">Private Parties</a></li>
+                <li><a href="#">Destination Wedding</a></li>
+            </ul>
+        </div>
+
+        <!-- Other Links -->
+        <div class="footer-links">
+            <h4>Other Links</h4>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p>Melodia Event Management, T V Center, Kakkanad, Kochi, Kerala 682037</p>
+            <p>Phone: +91-859-001-0011</p>
+            <p>Email: <a href="mailto:melodiaeventmanagement@gmail.com">melodiaeventmanagement@gmail.com</a></p>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>All Rights Reserved | Melodia® Events | 2008–2024</p>
+        <p>DMCA.com Protection Status | Designed by N.S</p>
+    </div>
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    // Initialize Feather Icons
+    feather.replace();
+</script>
+</body>
+<style>
+
+</style>
+</html>

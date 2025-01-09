@@ -1,0 +1,125 @@
+{% extends 'Main.html' %}
+{% block content %}
+    <div class="gallery-container">
+        <div class="heading">
+            <h3>Photo<span>Gallery</span></h3>
+        </div>
+        <div class="box">
+            <div class="dream">
+                <img src="https://crystallinestudio.com/image_gallery_big/Crystalline_photography_1220.jpg">
+                <img src="https://solenoidfilms.com/wp-content/uploads/2023/10/DIL03674-scaled.webp">
+                <img src="https://i.ytimg.com/vi/unzRVh2r3SE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLALQDD9M--Qs72_X63eveplMAw1SA">
+                <img src="https://eventsmanagementkerala.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-08-26-at-7.53.33-PM.webp">
+                <img src="https://i0.wp.com/www.framehunt.com/wp-content/uploads/2021/03/hindu-wedding-photography-kerala__LIB2037.jpg?fit=2318%2C1545&ssl=1">
+                <img src="https://i.ytimg.com/vi/PcjCn-4n_GY/maxresdefault.jpg">
+                <img src="https://i.pinimg.com/736x/7d/a0/16/7da01695091d77a7abf7ff140d2a2e13.jpg">
+                <img src="https://blog.g3fashion.com/wp-content/uploads/2016/12/d6671c2839b831ca0abfc8601866cac4-e1594986335189.jpg">
+            </div>
+            <div class="dream">
+                <img src="https://cdn0.weddingwire.in/article/7411/3_2/960/jpg/91147-kerala-christian-wedding-ceremony-gautam-khullar-happily-married.jpeg">
+                <img src="https://eventsmanagementkerala.com/wp-content/uploads/2023/10/wedding-stage-decoration-in-kerala-with-fresh-flower-1-1024x705.webp">
+                <img src="https://cdn0.weddingwire.in/article/3948/3_2/1280/jpg/48493-pakistani-wedding-dresses-sabyasachi-lead.jpeg">
+                <img src="https://www.dritaphotography.com/blogs/blogs/banners/DRITA%20FAMILY%20WEDDING%20SHOOT.jpg">
+                <img src="https://i.pinimg.com/736x/a3/84/a7/a384a7cc6d34c0a545bf4e572a5cc6e0.jpg">
+                <img src="https://yaraphotography.in/wp-content/uploads/2024/01/image_editor_output_image-665260491-1705293712359.jpg">
+                <img src="https://i.pinimg.com/originals/b2/c1/43/b2c14323225c3fa90d7d33a4918ff618.jpg">
+                <img src="https://i.ytimg.com/vi/umQpiAa6ANg/maxresdefault.jpg">
+            </div>
+            <div class="dream">
+                <img src="https://wevaphotography.com/wp-content/uploads/2022/04/Kerala-Muslim-Wedding-102-528x800.jpg">
+                <img src="https://floweraura-blog-img.s3.ap-south-1.amazonaws.com/wedding-blog/crafting-the-perfect-wedding-captions-for-instagram.jpg">
+                <img src="https://i.pinimg.com/736x/af/b2/cc/afb2cc56842afeaa3812056f76f662c9.jpg">
+                <img src="https://i.pinimg.com/originals/3e/d7/c0/3ed7c0163ef976c2188a94086e043aab.jpg">
+                <img src="https://i.ytimg.com/vi/kMq0TodId2I/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgYyhSMA8=&rs=AOn4CLCm33g-9PLwx1FKFVUtvB2B-Sy1tg">
+                <img src="https://jugyah-dev-property-photos.s3.ap-south-1.amazonaws.com/simple_wedding_stage_deocration_03_981402ddb2.webp">
+            </div>
+        </div>
+        <div class="btn">
+            <a href="#">More</a>
+        </div>
+    </div>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+    .gallery-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin:40px 20px 0 20px;
+    }
+    .gallery-container .heading{
+    width:50%;
+    padding-bottom:50px;
+    }
+    .gallery-container .heading h3{
+    font-size:3em;
+    font-weight:bolder;
+    border-bottom:3px solid #222;
+    padding-bottom:10px;
+    }
+    .gallery-container .heading h3 span{
+    font-weight:100;
+    }
+    .gallery-container .box{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+
+    }
+    .gallery-container .box .dream{
+    display:flex;
+    flex-direction:column;
+    width:32.5%;
+    }
+    .gallery-container .box .dream img{
+    width:100%;
+    padding-bottom:15px;
+    border-radius:5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    }
+    .gallery-container .box .dream img:hover{
+    transform: scale(1.08);
+    }
+    .gallery-container .box .dream img:after {
+    content: attr(data-caption);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+.gallery-container .box .dream img:hover::after {
+    opacity: 1;
+}
+    .gallery-container .btn{
+    margin:40px 0 70px 0;
+    background:#222;
+    padding:15px 45px;
+    border-radius:5px;
+    }
+    .gallery-container .btn a{
+    color:#fff;
+    font-size:1.2rem;
+    text-decoration:none;
+    font-weight:bolder;
+    letter-spacing:3px;
+    }
+</style>
+{% endblock %}

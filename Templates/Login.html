@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8d7da;
+            color: #800000;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            margin-top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row {
+            align-items: stretch;
+            height: 100%;
+            margin: 0;
+        }
+
+        .card {
+            border: 2px solid #800000;
+            border-radius: 0;
+            box-shadow: none;
+            height: 100%;
+        }
+
+        .card-body {
+            background-color: white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .card-title {
+            color: #800000;
+        }
+
+        .btn-primary {
+            background-color: #a90000;
+            border-color: #800000;
+        }
+
+        .btn-primary:hover {
+            background-color: #800000;
+            border-color: #600000;
+        }
+
+        .alert {
+            background-color: #f8d7da;
+            color: #800000;
+            border: 2px solid #800000;
+        }
+
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #800000;
+        }
+
+        .register-link a {
+            color: #a90000;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            color: #800000;
+        }
+
+        .form-left, .form-right {
+            padding: 0;
+            height: 100%;
+        }
+
+        .form-left {
+            background-color: white;
+            color: #800000;
+            padding: 2rem;
+            border: 2px solid #800000;
+        }
+
+        .form-right {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-space {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .logo-space img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row w-100">
+            <!-- Left Image Section -->
+            <div class="col-md-6 form-right">
+                <div class="logo-space">
+                    <img src="{% static 'Images/logo.png' %}" alt="Logo">
+                </div>
+                <img src="https://i.pinimg.com/736x/77/c7/1c/77c71c9de9bf1b0452b503fbe72a01a3.jpg" alt="Login Image">
+                <div class="overlay">Milina Events</div>
+            </div>
+
+            <!-- Login Form Section -->
+            <div class="col-md-6 form-left">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Sign In</h3>
+                        <form method="post" action="{% url 'Login' %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <input type="text" name="username" class="form-control" placeholder="Username" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                        </form>
+
+                        {% if messages %}
+                            <div class="mt-3">
+                                {% for message in messages %}
+                                    <div class="alert alert-info">{{ message }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <!-- Register Here Link -->
+                        <div class="register-link">
+                            <p>Not registered? <a href="{% url 'Customer_Registration' %}">Register Here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

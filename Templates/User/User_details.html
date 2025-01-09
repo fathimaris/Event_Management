@@ -1,0 +1,91 @@
+{% extends 'User/User.html' %}
+
+{% block content %}
+<style>
+    /* Styling for the page */
+    body {
+        background-color: #ffffff;
+        color: #2b0000;
+    }
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        color: #2b0000;
+    }
+
+    .card-header {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .card-body p {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .card-body p strong {
+        font-weight: bold;
+    }
+
+    .btn {
+        background-color: #2b0000;
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    .btn:hover {
+        background-color: #ffffff;
+        border: 2px solid #2b0000;
+        color: #2b0000;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-container .btn {
+        width: 48%; /* Adjust button width */
+    }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2>{{ profile.Full_name }} </h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Username:</strong> {{ profile.user.username }}</p>
+            <p><strong>Email:</strong> {{ profile.user.email }}</p>
+            <p><strong>Phone Number:</strong> {{ profile.phone_number }}</p>
+            <p><strong>Address:</strong> {{ profile.address }}</p>
+
+            <div class="btn-container">
+                <a href="{% url 'View_Booked_Event' %}" class="btn">Registered Events</a>
+                <a href="{% url 'Edit_Profile' %}" class="btn">Edit Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

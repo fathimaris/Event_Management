@@ -1,0 +1,41 @@
+{% extends 'Admin/Admin.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4" style="color: #2b0000; font-size: 2.5rem; font-weight: bold; text-decoration: underline;">
+        Admin Dashboard
+    </h2>
+
+    <div class="row justify-content-center">
+        <!-- Registered Users Card -->
+        <div class="col-md-3">
+            <div class="card text-center" style="background-color: #2b0000; color: #ffffff;">
+                <div class="card-body">
+                    <h5 class="card-title">Registered Users</h5>
+                    <p class="card-text" style="font-size: 2rem;">{{ user_count }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Event Bookings Card -->
+        <div class="col-md-3">
+            <div class="card text-center" style="background-color: #2b0000; color: #ffffff;">
+                <div class="card-body">
+                    <h5 class="card-title">Total Event Bookings</h5>
+                    <p class="card-text" style="font-size: 2rem;">{{ booking_count }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completed Payments Card -->
+        <div class="col-md-3">
+            <div class="card text-center" style="background-color: #2b0000; color: #ffffff;">
+                <div class="card-body">
+                    <h5 class="card-title">Completed Payments</h5>
+                    <p class="card-text" style="font-size: 2rem;">{{ completed_payments_count }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

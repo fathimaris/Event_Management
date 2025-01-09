@@ -1,0 +1,16 @@
+{% extends 'Admin/Admin.html' %}
+{% block content %}
+<h2>Add Event for {{ date }}</h2>
+<form method="POST" action="{% url 'add_event' %}">
+    {% csrf_token %}
+    <label for="title">Event Title:</label>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="description">Event Description:</label>
+    <textarea id="description" name="description" required></textarea><br><br>
+
+    <input type="hidden" name="event_date" value="{{ date }}">
+
+    <button type="submit">Add Event</button>
+</form>
+{% endblock %}

@@ -1,0 +1,479 @@
+
+body{
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Georgia';
+}
+
+.navbar {
+    background-color: rgba(139, 0, 0, 0.7);  /* Dark red background color */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* White text */
+}
+
+.dropdown-menu {
+    background-color: rgb(168, 152, 152); /* Dark red background for dropdowns */
+}
+
+.dropdown-menu .dropdown-item {
+    color: darkred; /* White text for dropdown items */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #9b0000; /* Darker red background on hover */
+}
+
+.carousel-item img {
+    height: 700px; /* Set the height of the carousel images */
+    object-fit: cover; /* Ensure images cover the space */
+}
+a{
+margin-left:35px;}
+.overlay-text {
+position: absolute; /* Positioning to overlay on the carousel */
+bottom: 250px; /* Distance from the bottom */
+margin-right:50%;
+left: 100px; /* Distance from the left */
+color: white; /* White text color */
+font-size: 3rem; /* Text size */
+font-weight: bold; /* Bold font */
+text-align: left; /* Align text to the left */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+}
+
+.container1{
+padding: 20px; /* Add padding to the container */
+margin-top:25px;
+
+}
+
+.content-section {
+display: flex; /* Use flexbox for layout */
+justify-content: space-between; /* Space out child elements */
+align-items: flex-start; /* Align items at the start of the container */
+margin-top: 50px;
+margin-bottom: 50px;
+
+}
+
+.text-section {
+flex: 1; /* Allow text section to take available space */
+margin-right: 100px;/* Space between text and video */
+margin-left:150px;
+}
+.text-section p{
+margin-top:25px;
+color:#606060;}
+
+.video-section{
+width:45%;
+margin-right:100px;
+}
+
+
+.video-embed {
+width:600px;
+height:300px;
+}
+.container2 {
+display: flex; /* Use flexbox for layout */
+justify-content: space-between; /* Space out left and right sections */
+align-items: flex-start; /* Align items at the top */
+
+
+background-color:#FFFFED;
+
+}
+
+.image-grid {
+display: grid; /* Use grid for 2x2 layout */
+grid-template-columns: repeat(2, 1fr); /* Two columns */
+gap:2px; /* Space between grid items */
+margin-top:100px;
+margin-bottom:100px;
+margin-left:100px;
+}
+
+.image-grid img {
+width: 300px;
+height: 200px;
+}
+
+.text-content2 {
+width: 50%; /* Set width for text content */
+display: flex; /* Use flexbox for vertical alignment */
+flex-direction: column; /* Align items in a column */
+justify-content: center; /* Center content vertically */
+margin-top:100px;
+margin-bottom:100px;
+margin-right:100px;
+margin-left:50px;
+
+
+}
+.text-content2 p{
+color:#606060;}
+
+.button-container {
+display: flex; /* Use flexbox for buttons */
+gap: 10px; /* Space between buttons */
+margin-top: 20px; /* Add space above buttons */
+}
+
+.expert-btn, .whatsapp-btn {
+padding: 10px 20px; /* Add padding to buttons */
+border: none; /* Remove default border */
+border-radius: 5px; /* Optional: Add border radius for buttons */
+cursor: pointer; /* Change cursor on hover */
+transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.expert-btn {
+background-color: #007bff; /* Blue background for Talk to Expert button */
+color: white; /* White text color */
+}
+
+.whatsapp-btn {
+background-color: #25D366; /* Green background for WhatsApp button */
+color: white; /* White text color */
+}
+
+.expert-btn:hover {
+background-color: #0056b3; /* Darker blue on hover */
+}
+
+.whatsapp-btn:hover {
+background-color: #1da852; /* Darker green on hover */
+}
+/* Parallax Background */
+.parallax-section {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+background-image: url('https://img.freepik.com/free-photo/groom-putting-ring-bride-s-finger_1157-338.jpg'); /* Replace with your image URL */
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+padding: 50px;
+color: white;
+min-height: 700px;
+position: relative;
+}
+
+/* Left Side Text Content */
+.text-content {
+width: 70%;
+max-width: 700px;
+padding: 20px;
+margin-top:100px;
+border-radius: 5px;
+margin-left:100px;
+}
+
+.text-content p {
+color:white;
+margin: 10px 0;
+font-size: 1.1rem;
+line-height: 1.6;
+}
+
+/* Right Side Inquiry Form */
+.enquiry-form {
+width: 30%;
+padding: 20px;
+border-radius: 5px;
+margin-right:150px;
+margin-top:100px;
+}
+
+
+
+.enquiry-form input,
+.enquiry-form textarea {
+width: 100%;
+height:50px;
+padding: 10x;
+margin-top: 15px;
+margin-bottom: 15px;
+border: none;
+border-radius: 3px;
+}
+
+.enquiry-form .submit-btn {
+width: 100%;
+padding: 10px;
+background-color: darkred;
+color: white;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+font-size: 1rem;
+transition: background-color 0.3s ease;
+}
+
+.enquiry-form .submit-btn:hover {
+background-color: White;
+color:Darkred;
+}
+.services-section {
+text-align: center;
+max-width: 1200px;
+}
+
+.services-section h2{
+font-size: 2.5rem;
+color: darkred;
+margin-bottom: 10px;
+margin-top:50px;
+margin-left:250px;
+}
+
+.services-intro {
+font-size: 1.1rem;
+color: #555;
+margin-bottom: 30px;
+line-height: 1.6;
+margin-left: 184px;
+width: 1140px;
+}
+
+/* Grid layout for three cards per row */
+.services-cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-left: 240px;
+width: 1070px;
+}
+p{
+font-family:'Roboto';
+}
+.card1 {
+background-color:#FFFFED;
+padding: 15px;
+box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+text-align: left;
+transition: transform 0.3s ease;
+
+}
+
+.card1:hover {
+transform: scale(1.05);
+}
+
+.card1 img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+
+}
+
+.card1 h3 {
+font-size: 1.5rem;
+color: #333;
+margin: 15px 0 10px;
+}
+
+.card1 p {
+font-size: 1rem;
+color: #666;
+margin-bottom: 15px;
+}
+
+.learn-more {
+background-color: #FFFFED;
+color: #b5651d;
+/* margin-right:200px; */
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+font-family:'Roboto' ;
+}
+
+.learn-more:hover {
+color:Darkred;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+.services-cards {
+grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+}
+}
+
+@media (max-width: 600px) {
+.services-cards {
+grid-template-columns: 1fr; /* One card per row */
+}
+}
+.blog-section {
+    background-color: #FFFFED;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 100px;
+    }
+/* Intro section styling */
+.intro-section {
+    margin-bottom: 40px;
+    text-align: center;
+    }
+.intro-section h2 {
+    font-size: 2rem;
+    color: darkred;
+    margin-bottom: 10px;
+    padding: 20px;
+    }
+.intro-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    padding-left: 51px;
+    padding-right: 150px;
+    }
+    /* Cards section styling */
+
+
+/* Card styling */
+/* Container styling */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+/* Card styling */
+.card2 {
+    flex: 1 1 300px; /* Flexibly adjusts width, minimum of 300px */
+    max-width: 300px; /* Maximum width for each card */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+}
+.card2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+.card2 h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+.card2 p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+}
+.card2 button:hover {
+    color: darkred;
+}
+.card2 .lm{
+    background-color: #ffffff;
+color: #b5651d;
+margin-right:30px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+font-family:'Roboto' ;
+}
+/* Responsive styling */
+@media (max-width: 900px) {
+    .cards-section {
+        flex-direction: column; /* Stacks cards vertically on smaller screens */
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.footer-info h2{
+    margin:15px;
+}
+.footer-info p{
+    margin-right:250px;
+    margin-left: 250px;
+}
+
+.footer-info {
+    width: 100%;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links,
+.footer-contact {
+    flex: 1;
+    min-width: 200px; /* Ensures responsive layout */
+    margin: 10px;
+    color: #fff;
+}
+
+.footer-links h4, .footer-contact h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover,
+.footer-contact a:hover {
+    color: #ff6f61;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}

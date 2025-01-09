@@ -1,0 +1,75 @@
+{% extends 'Admin/Admin.html' %}  <!-- or your base template for the admin -->
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8; /* Light gray background for better contrast */
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2b0000; /* Dark maroon */
+        }
+        .navigation {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .navigation a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2b0000; /* Dark maroon */
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 2px solid #2b0000;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navigation a:hover {
+            background-color: #800000;
+            color: white;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #2b0000; /* Dark maroon */
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #2b0000; /* Dark maroon */
+            color: white;
+        }
+        td {
+            color: #333;
+        }
+        td:hover {
+            background-color: #fdeaea; /* Light red for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Calendar for {{ year }}</h1>
+    <div class="navigation">
+        <a href="{% url 'calendar' prev_year prev_month %}">&laquo; Previous</a>
+        <a href="{% url 'calendar_view' %}">Current</a>
+        <a href="{% url 'calendar' next_year next_month %}">Next &raquo;</a>
+    </div>
+    <div>
+        {{ calendar|safe }}
+    </div>
+</body>
+</html>
+{% endblock %}

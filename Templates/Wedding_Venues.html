@@ -1,0 +1,279 @@
+{% extends 'Main.html' %}
+{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Parallax section */
+        .parallax {
+            position: relative;
+            background-image: url('https://hometriangle.com/blogs/content/images/2024/03/Pre-Wedding-Photography.jpg'); /* Replace with your image URL */
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Text on top of the image */
+        .overlay-text {
+            position: absolute;
+            bottom: 20px;
+            left: 100px;
+            color: white;
+            padding: 25px;
+            border-radius: 5px;
+            max-width: 809px;
+        }
+
+        .overlay-text h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .overlay-text p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Content section */
+        .content {
+            padding: 40px 20px;
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left-content {
+            width: 60%;
+            padding-right: 20px;
+        }
+
+        .left-content h2 {
+            font-size: 30px;
+            color: crimson;
+            margin-bottom: 15px;
+        }
+
+        .left-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: grey;
+        }
+
+        .left-content strong {
+            color: crimson;
+        }
+
+        .right-content {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-content img {
+            width: 100%;
+            height: 307px;
+            max-width: 628px;
+            border-radius: 10px;
+        }
+
+        /* Card section */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f9f9f9;
+
+        }
+
+        .card {
+            width: 25%;
+            margin-bottom: 30px;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-left: 73px;
+            margin-right: 35px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff; /* White background for each card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Prevent overflow of image */
+    transition: transform 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 155px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 20px; /* Title font size */
+    margin: 10px; /* Margin around title */
+    color: #333;
+        }
+
+        .card p {
+            margin: 0; /* Reset margin */
+    padding: 0 10px 10px; /* Padding for paragraph */
+    color: #666;
+
+        }
+
+        .card button {
+            padding: 10px 15px;
+            color: crimson;
+            background-color: white;
+            border: 2px solid crimson;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+            width: 162px;
+
+        }
+
+        .card button:hover {
+            background-color: crimson;
+            color: white;
+            border: 2px solid white;
+        }
+
+</style>
+</head>
+<body>
+
+    <!-- Parallax Background Section -->
+    <div class="parallax">
+        <!-- Overlay text on top of the image -->
+        <div class="overlay-text">
+            <h1>Wedding Venues in Kerala</h1>
+            <p>Kerala, the land of pristine beaches, lush greenery, and serene backwaters, offers enchanting wedding venues. From luxurious resorts to quaint homestays, Kerala has an array of options to create a memorable wedding experience.</p>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <div class="left-content">
+            <h2>Beautiful Wedding Venues in Kerala</h2>
+            <p>Wedding venues in Kerala are the best way to create fairytales as you tie the knot in God's own country. Wedding venues in Kerala boast abundant natural greenery and captivating beauty. These venues offer modern facilities that are on par with venues across India and the world. With stunning surroundings and state-of-the-art amenities, these venues provide the perfect setting for your special day.</p>
+
+            <p>Wedding venues in Kerala offer an opportunity to celebrate in a luxurious, traditional, or modern ambience. <strong>Milina Events</strong> can assist in selecting wedding venues and provide wedding event management services. These venues also provide the convenience of having everything in one place, making the wedding planning process easier and stress-free.</p>
+
+            <p>And here below, we have listed some wedding venues in Kerala, India highlighting the services of <strong>Milina Events</strong>.</p>
+        </div>
+
+        <div class="right-content">
+            <img src="https://live-core-image-service.vivialplatform.net/images/747862/orig/big%20island%20hawaii%20wedding%20photography-122-2.gbTRgmMub.jpg" alt="Wedding Venue"> <!-- Replace with your image URL -->
+        </div>
+    </div>
+
+<!-- Card Section -->
+<div class="card-container">
+    <!-- Card 1 -->
+   <div class="card">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/cb/d9/68/the-river-retreat.jpg?w=700&h=-1&s=1" alt="Venue 1"> <!-- Replace with your image URL -->
+    <h3>Rever Ritreat</h3>
+   <p>Thrissur</p>
+    <a href="">
+            <button>Request Pricing</button>
+        </a>
+</div>
+
+<!-- Card 2 -->
+<div class="card">
+    <img src="https://www.kumarakomlakeresort.in/assets/images/image-sliders/events-weddings-slider/events-weddings-slider-7.jpg" alt="Venue 2"> <!-- Replace with your image URL -->
+    <h3>Kumarakom lake resort</h3>
+ <p>Kottayam</p>
+    <a href="">
+            <button>Request Pricing</button>
+        </a>
+</div>
+
+<!-- Card 3 -->
+<div class="card">
+    <img src="https://opendigest.in/wp-content/uploads/2023/11/Destination-wedding-.jpg" alt="Venue 3"> <!-- Replace with your image URL -->
+    <h3>Sankumugham Beach</h3>
+<p>Thiruvanathapuram</p>
+    <a href="">
+            <button>Request Pricing</button>
+        </a>
+</div>
+
+<!-- Card 4 -->
+<div class="card">
+    <img src="https://yknotweddings.in/wp-content/uploads/2018/07/Raviz-Kollam-Photo_1-768x450.jpg" alt="Venue 4"> <!-- Replace with your image URL -->
+    <h3>The Raviz</h3>
+    <p>Kollam</p>
+   <a href="">
+            <button>Request Pricing</button>
+        </a>
+</div>
+
+<!-- Card 5 -->
+<div class="card">
+    <img src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_187,w_3600,h_2025,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/abad-turtle-beach-resort-mararikulam/Wedding_3_qzivbh" alt="Venue 5"> <!-- Replace with your image URL -->
+    <h3>Abad Turtle Beach resort</h3>
+   <p>Alappuzha</p>
+    <a href="">
+            <button>Request Pricing</button>
+        </a>
+</div>
+
+<!-- Card 6 -->
+<div class="card">
+    <img src="https://www.thesienavillage.com/assets/images/destination-wedding-munnar.jpg" alt="Venue 6"> <!-- Replace with your image URL -->
+    <h3>The siena Village</h3>
+    <p>Idukki</p>
+   <a href="">
+            <button>Request Pricing</button>
+        </a>
+</div>
+
+<!-- Card 7 -->
+<div class="card">
+    <img src="https://www.cghearth.com/uploads/DiningImages/20211004070823amchittoor-kottaram3.jpg" alt="Venue 7"> <!-- Replace with your image URL -->
+    <h3>Chittoor Kottaram</h3>
+   <p>Kochi</p>
+<a href="">
+            <button>Request Pricing</button>
+        </a></div>
+
+<!-- Card 8 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXC9NyB0H4DH733b5-bAr9MT7sEH_Bu23gfw&s" alt="Venue 8"> <!-- Replace with your image URL -->
+    <h3>Kadavu Calicut</h3>
+ <p>Kozhikode</p>
+<a href="">
+            <button>Request Pricing</button>
+        </a></div>
+
+<!-- Card 9 -->
+<div class="card">
+    <img src="https://www.vythirivillage.com/wp-content/uploads/2020/11/rooms-banner.jpg" alt="Venue 9"> <!-- Replace with your image URL -->
+    <h3>vytri village resort</h3>
+    <p>wayanad</p>
+<a href="">
+            <button>Request Pricing</button>
+        </a></div>
+
+</div>
+
+{% endblock %}

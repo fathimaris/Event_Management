@@ -1,0 +1,112 @@
+{% extends 'User/User.html' %}
+{% block content %}
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #2b0000;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2b0000;
+            margin-bottom: 30px;
+            text-decoration: underline;
+            font-size: 1.8rem;
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        th, td {
+            border: 2px solid #2b0000;
+            text-align: center;
+            padding: 10px;
+            color: #2b0000;
+            font-size: 1rem;
+        }
+
+        th {
+            color: crimson;
+            font-weight: bold;
+            background-color: #ffe6e6;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ffe6e6;
+        }
+
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .bg-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .bg-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .bg-warning {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+
+    <div class="table-container">
+        <div class="table">
+            <h2>EVENT STATUS</h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">SI NO</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">MOBILE</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col">LOCATION</th>
+                        <th scope="col">STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                        {% for j in data1 %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ i.Full_name }}</td>
+                                <td>{{ i.phone_number }}</td>
+                                <td>{{ i.email }}</td>
+                                <td>{{ j.Venue }}</td>
+                                <td>
+                                    {% if j.Approval_Status == 0 %}
+                                        <span class="status-badge bg-warning">Pending</span>
+                                    {% elif j.Approval_Status == 1 %}
+                                        <span class="status-badge bg-success">Approved</span>
+                                    {% elif j.Approval_Status == 2 %}
+                                        <span class="status-badge bg-danger">Rejected</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,227 @@
+{% extends 'Main.html' %}
+{% block content %}
+ <div class="container-coperate">
+
+        <div class="slide">
+
+
+            <div class="item" style="background-image: url(https://i0.wp.com/vocean.com/wp-content/uploads/2023/05/MicrosoftTeams-image-16.jpg?fit=680%2C420&ssl=1);">
+                <div class="content">
+                    <div class="name">Gartner Digital Workplace Summit</div>
+                    <div class="des">A conference that focuses on remote or hybrid modeling at work, and is a good opportunity for executive leadership development</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://cdn.prod.website-files.com/653bd34db45f87422d8acf17/654ca3933dffee07f7939b3b_64e88ff808e018b96d021ad5_IMG_8830-980x735.jpeg);">
+                <div class="content">
+                    <div class="name">Dublin Tech Summit</div>
+                    <div class="des">A two-day conference that's a base for tech companies and is one of the fastest-growing B2B tech conferences in the world</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://coresight.com/wp-content/uploads/2023/05/RSA-Conference-copy.jpg);">
+                <div class="content">
+                    <div class="name">RSA Conference</div>
+                    <div class="des">An information security show that connects attendees with knowledgeable people and content to help them stay ahead of cyberthreats.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://partyslate.imgix.net/photos/1709690/photo-acb51fd5-a825-4414-a09e-c62f2cea4592.JPG?ixlib=js-2.3.2&auto=compress%2Cformat&bg=fff&cs=srgb);">
+                <div class="content">
+                    <div class="name">EntreLeadership Summit</div>
+                    <div class="des">An executive leadership conference that can provide fresh leadership insights</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://nmcdn.io/e186d21f8c7946a19faed23c3da2f0da/347bed083486499c98f1609efa95efbd/files/blog/circles-conference-2014/cirlces2014-main-process-s1440x-t1558442658.jpg?v=7aa6d54725);">
+                <div class="content">
+                    <div class="name">Circles Conference</div>
+                    <div class="des">A three-day conference for designers, techies, and creators that focuses on design, illustration, creative direction, and UX design</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://websummit.com/wp-media/2023/11/opening-night-of-Web-Summit-2023-at-the-Altice-Arena-in-Lisbon-Portugal.jpg);">
+                <div class="content">
+                    <div class="name">Web Summit</div>
+                    <div class="des">A conference that explores every aspect of tech and marketing, with speakers and workshops</div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button class="prev"><i data-feather="arrow-left"></i></button>
+            <button class="next"><i data-feather="arrow-right"></i></button>
+        </div>
+
+    </div>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eaeaea;
+    overflow: hidden;
+}
+
+.container-coperate{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+
+.container-coperate .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+
+</style>
+<script>
+    let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
+</script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    // Initialize Feather Icons
+    feather.replace();
+</script>
+
+{% endblock %}
